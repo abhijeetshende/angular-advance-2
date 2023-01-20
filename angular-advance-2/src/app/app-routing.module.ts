@@ -5,6 +5,7 @@ import { Component2Component } from './component2/component2.component';
 import { NestedRoutingChildComponent } from './nested-routing-child/nested-routing-child.component';
 import { NestedRoutingChild2Component } from './nested-routing-child2/nested-routing-child2.component';
 import { NestedRoutingParentComponent } from './nested-routing-parent/nested-routing-parent.component';
+import { ResolveService } from './services/resolve.service';
 import { TestGuard } from './test.guard';
 import { TestdeactivateGuard } from './testdeactivate.guard';
 
@@ -25,7 +26,8 @@ const routes: Routes = [
       {
         path: 'child2',
         component: NestedRoutingChild2Component,
-        canDeactivate:[TestdeactivateGuard]
+        canDeactivate:[TestdeactivateGuard],
+        resolve:[ResolveService]
       },
       {
         path: '**',

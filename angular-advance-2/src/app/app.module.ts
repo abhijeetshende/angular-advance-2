@@ -8,6 +8,7 @@ import { Component2Component } from './component2/component2.component';
 import { NestedRoutingParentComponent } from './nested-routing-parent/nested-routing-parent.component';
 import { NestedRoutingChildComponent } from './nested-routing-child/nested-routing-child.component';
 import { NestedRoutingChild2Component } from './nested-routing-child2/nested-routing-child2.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NestedRoutingChild2Component } from './nested-routing-child2/nested-rou
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
